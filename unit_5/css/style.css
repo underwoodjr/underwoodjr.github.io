@@ -1,0 +1,140 @@
+@import url(https://fonts.googleapis.com/css?family=Exo|Vollkorn+SC:400,700);
+
+.wrapper{
+	border: 1px black solid;
+	padding: 20px;
+}
+header {
+    background-color: #FFED74;
+    border: 1px black solid;
+    padding: 20px;
+}
+nav {
+    background-color: #E8C66A;
+    border: 1px black solid;
+    padding: 20px;
+    }
+aside {
+    background-color: #FFC675;
+    border: 1px black solid;
+    padding: 20px;
+    width: 35%;
+}
+article {
+    background-color: #E89C6C;
+    border: 1px black solid;
+    padding: 20px;
+}
+footer {
+    background-color: #FF957E;
+    border: 1px black solid;
+    padding: 20px;
+}
+div {
+    background-color: #FFE2B8;
+    border: 1px black solid;
+    padding: 20px;
+}
+section {
+    background-color: #FFE2B8;
+    border: 1px black solid;
+    padding: 20px;
+}
+img{
+	width: 100%;
+}
+p{
+	width: 36em;
+}
+#hero{
+	display: block;
+	width: 40%;
+	margin: 0 auto;
+}
+#pin{
+	width: 2%;
+}
+
+
+
+/*}
+body{
+	color: black;
+	background: #f2ecd2;
+	font-family: 'Vollkorn SC', serif;
+	font-size: 16px;
+}
+p{
+	font-family: 'Exo', sans-serif;
+	line-height: 1.5em
+
+}
+h1{
+	color: black;
+	font-variant: small-caps;
+	letter-spacing: 2.5px;
+}
+a{
+	text-decoration: none;
+	color:#8E65FF;
+}
+img{
+	width: 30em;
+}
+nav a{
+	padding: 0.63em 1.25em 0.63em 1.25em;
+	width: 560em;
+	color: black;
+	letter-spacing: 2.5px;
+	font-family: 'Vollkorn SC', serif;
+	font-size: 0.88em;
+	text-transform: uppercase;
+	width: 560em;
+}
+nav{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+h2{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-family: 'Vollkorn SC', serif;
+}
+h3{
+	font-family: 'Vollkorn SC', serif;
+}
+ h3 p{
+	padding-bottom: 10px;
+}
+footer{
+	color: black;
+	text-align: center;
+}
+#resume{
+	font-variant: small-caps;
+	letter-spacing: 2px;
+	color: black;
+	margin: 2em auto;
+
+}
+#resume p{
+	font-size: 1em;
+	font-variant: initial;
+	width: 30em;
+	letter-spacing: 1px;
+	line-height: 29px;
+}
+#pin{
+	width: 2%;
+}
+#slogan{
+	font-style: italic;
+}
+#hero{
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+	width: 40%;
+	opacity: 0.75;
+}
