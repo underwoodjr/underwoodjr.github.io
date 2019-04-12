@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Scott Underwood's Portfolio</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+		  // Add smooth scrolling to all links
+		  $("a").on('click', function(event) {
+
+		    // Make sure this.hash has a value before overriding default behavior
+		    if (this.hash !== "") {
+		      // Prevent default anchor click behavior
+		      event.preventDefault();
+
+		      // Store hash
+		      var hash = this.hash;
+
+		      // Using jQuery's animate() method to add smooth page scroll
+		      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+		      $('html, body').animate({
+		        scrollTop: $(hash).offset().top
+		      }, 800, function(){
+		   
+		        // Add hash (#) to URL when done scrolling (default click behavior)
+		        window.location.hash = hash;
+		      });
+		    } // End if
+		  });
+		});
+		</script>
+	</head>
+	<body>
+		<div class="wrapper">
+		<nav>
+				<a href="#">Home</a>
+				<a href="#aboutme">About Me</a>
+				<a href="#work">Work</a>
+				<a href="#resume">Resume</a>
+				<a href="#contact">Contact</a>
+		</nav>
+		<header>
+			<img id="hero" src ="images/earth.png" alt="planet earth viewed from space" title="Planet Earth">
+			<h1>Scott Underwood's Portfolio</h1>
+			<img id="pin" src ="images/pin.png" alt="red map pin" title="You Are Here">
+		<p>you are here</p>
+		</header>
+
+
+		<section id="work" class="clearfix">
+		<h2>Work :</h2>
+		<article id= "flashfind">
+			<h3>FlashFind</h3>
+			<a href="#"><img src ="images/flashfind_hero.png" alt="tattoo artist working on a client's arm piece" title="FlashFind"></a>
+		</article>
+		<article id ="aod">
+			<h3>Art of Drawers</h3>
+			<a href="#"><img src ="images/aod_hero.jpg" alt="A modern kitchen" title="Art of Drawers"></a>
+		</article>
+		<article id ="LG">
+			<h3>Lime Gorilla</h3>
+			<a href="#"><img src ="images/LG_hero.jpg" alt="Two individuals taking an afternoon jog outside" title="Lime Gorilla"></a>
+		</article>
+		<article id ="10X">	
+			<h3>10XFive Creative Portfolio</h3>
+			<a href="#"><img src ="images/10x_hero.jpg" alt="Designer working on several logo designs at his desk" title="10XFive Creative"></a>
+		</article>
+		</section>
+
+		<section id="two_column" class="clearfix">
+			<section id="aboutme">
+			<h2>About Me :</h2>
+			<p id="slogan">UX/UI Designer with a background in Digital Marketing, Information Systems, & Graphic Communications Management</p>
+			<p>Less technical offerings:</p>
+			<ul>
+				<li><a href="images/young_scott.jpg">Earthling, 31 years experience (work in progress)</a></li>
+				<li><a href="images/levi.jpg">Dog Owner</a></li>
+				<li><a href="images/drums.jpg">Drummer</a></li>
+				<li><a href="images/TP_donuts.jpg">Donut enthusiast</a></li>
+				<li><a href="images/vader_interview.jpg">Darth Vader supporter</a></li>
+			</ul>
+			</section>
+
+			<aside id ="selfie">
+				<img src ="images/vader_selfie.png" alt="A Darth Vader Bathroom Mirror Selfie" title="Darth Vader Selfie">
+			</aside>
+		</section>
+
+		<section id="two_column_resume" class="clearfix">
+		<section id="resume">
+		<h2>Resume :</h2>
+
+			<h3>10Xfive • UX/UI Designer</h3>
+			<h4>March 2019 - Present | Atlanta, GA</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat.</p>
+			<h3>10Xfive • Podcast Host</h3>
+			<h4>May 2018 - March 2019 | Atlanta, GA</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat.</p>
+			<h3>10Xfive • Digital Conversion Manager</h3>
+			<h4>February 2017 - March 2019 | Atlanta, GA</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat.</p>
+			<h3>Roundsphere • Project Manager</h3>
+			<h4>December 2016 - January 2017 | Athens, GA</h4>
+			<p>Collaborated with development teams and senior product manager to streamline
+ 			and automate client’s complex business processes to increase efficiency. </p>	
+</section>
+
+<aside id="space_resume">
+	<img src="images/space_resume.png" alt="Illustration of space" title="more space">
+</aside>
+		
+	</section>
+
+	<section id="contact">
+		<h4>Contact Me:</h4>
+		<p><a href="mailto:gunderw111@gmail.com">gunderw111@gmail.com</a></p>
+		<a href="https://www.linkedin.com/in/gregory-underwood"><img src ="images/Linkedin.svg" alt="LinkedIn logo" title="LinkedIn"></a>
+		<a href="https://dribbble.com/gunderw1"><img src ="images/Dribbble.svg" alt="Dribbble Logo" title="Dribbble"></a>
+		<a href="https://www.instagram.com/scotteeeevil/"><img src ="images/Instagram.svg" alt="Instagram Logo" title="Instagram"></a>
+	</section>
+</div>
+	</body>
+</html>
+
