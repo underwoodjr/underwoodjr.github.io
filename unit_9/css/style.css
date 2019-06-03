@@ -1,0 +1,512 @@
+@import url(https://fonts.googleapis.com/css?family=Exo|Vollkorn+SC:400,700);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	overflow-x: hidden;
+	background-color: #f2ecd2;
+	font-size: 16px;
+	font-family: 'Vollkorn SC', serif;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+/* A container to hold contents together and center them on the screen. Remove need for large margin-left styles and having to write media queries for them later on */
+.container {
+	width: 100%;
+	max-width: 1024px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
+p {
+	padding-bottom: 1em;
+    font-weight: 300;
+    font-family: sans-serif;
+}
+
+h2 {
+	line-height: 1;
+}
+
+h3 {
+	padding-bottom: .5em;
+}
+
+h4 {
+	padding-bottom: 1em;
+}
+
+/*nav{
+	text-align: center;
+	margin: 3em 0 1em 0;
+}
+
+nav a:link {
+	color: black;
+	font-size: 0.88em;
+	margin: 0 2.5%;
+	padding-bottom: .25em;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 2.5px;
+	opacity: 0.5;
+}
+
+nav a:visited {
+	color: black;
+}
+
+nav a:hover {
+	opacity: 1;
+}*/
+
+#hero {
+	color: #fff;
+	width: 100%;
+	max-width: 640px;
+	margin: 0 auto;
+	position: relative;
+}
+
+#hero > img {
+    opacity: 0.8;
+}
+
+#hero h1 {
+	  font-variant: small-caps;
+	  letter-spacing: 2.5px;	
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  width: 100%;
+	  text-align: center;
+}
+
+#hero #pin {
+ 	position: absolute;
+  	top: 7%;
+  	left: 50%;
+  	width: 100px;
+}
+
+#hero #pin img {
+	width: 25px;
+}
+
+#hero #pin p {
+	position: absolute;
+	top: 0;
+	left: 28px;
+	font-size: 0.6em;
+    font-style: italic;
+}
+
+#work {
+	padding: 100px 0;
+}
+
+#work h2 {
+	opacity: 0.55;   
+	font-size: 19em;
+    position: relative;
+    margin-bottom: -75px;
+}
+
+#two_column {
+    background: #E5F1FF;
+    padding: 100px 0 0 0;
+}
+
+#two_column .container {
+	background: #E5F1FF url(../images/vader_selfie.png) no-repeat bottom right;
+	background-size: 31% auto;
+}
+
+#two_column h2 {
+	font-size: 12em;
+    opacity: 0.55;
+    z-index: 1;
+    margin-bottom: -67px;
+   	position: relative;
+}
+
+#aboutme {
+    padding: 100px 0;
+    width: 50%;
+}
+
+#aboutme ul {
+	padding-left: 40px;
+}
+
+#two_column_resume {
+	padding: 100px 0;
+}
+
+#two_column_resume h2 {
+	margin-bottom: -95px;
+	font-size: 12em;
+    opacity: 0.55;
+}
+
+#resume {
+	font-variant: small-caps;
+    letter-spacing: 2px;
+    color: #000;
+    float: left;
+    width: 43%;
+    padding: 100px 0 0 0;
+}
+
+#space_resume {
+	padding: 2.05em;
+	float: right;
+	width: 50%;
+}
+
+#contact {
+	background: #252525;
+	color: white;
+	text-align: center;
+	padding: 1.25em 0;
+}
+
+.contact-link_icon {
+	width: 30px;
+	margin: 0.5em;
+	display: inline-block;
+	transform:scale(1);
+}
+
+.contact-link_icon,
+.contact-link_icon img {
+	transition: all 0.7s ease;
+}
+
+.contact-link_icon:hover {
+	transform:scale(1.3);
+}
+
+#contact img:hover {
+	filter: invert(100%);
+}
+
+#contact p a {
+	color: white;
+}
+
+#contact p {
+	margin: auto auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* THE ACCORDIAN */
+/* REVISION - I like how you are thinking and you are on the right track. Let's approach this in a more responive friendly way by working more in percentages than pixels. */
+.accordian {
+	position: relative; /* We'll layer the projects and give them exact positioning. But first we need to declare this position on the parent */
+	margin: 0 auto;
+	width: 100%;
+	max-width: 768px;
+	overflow: hidden;
+}
+
+/* Create a child element what will maintain the height of the parent and serve as a placeholder for the projects in an absolute position */
+.accordian:after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 0;
+	padding-bottom: 54.8%;
+}
+
+/* Prevent flickering on some browsers */
+.accordian a,
+.accordian a img {
+	backface-visibility: hidden; 
+}
+
+/* The 4 projects are styled to be a 100% of the parent container both in width and height.
+By placing them in an absolute postion, we can more precisely place it where we want.
+This help us create the staggered/overlapped look */
+.accordian a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-left: 1px solid #888;
+	transition: left .5s ease-in-out;
+}
+
+/* 2nd project 25% from the left */
+.accordian .aod {
+	left: 25%;
+}
+
+/* 3rd project 50% from the left */
+.accordian .lime_gorilla {
+	left: 50%;
+}
+
+/* 4th project 75% from the left */
+.accordian .tenxfive {
+	left: 75%;
+}
+
+/* Project name/header */
+.accordian figcaption {
+	background-color: #484641;
+	padding: 7px 30px;
+	color: #fff;
+}
+
+/* Image treatment */
+.accordian img {
+	opacity: 0.8;
+	filter: contrast(130%) brightness(125%) sepia(30%) grayscale(100%);
+	transition: filter .5s ease-in-out;
+}
+
+/* Hover styles */
+/* We a couple of options, the first being that when we hover on a project simply move all it's siblings 100% from the left. And move the project being hovered 0% from the left. Like so:
+.accordian a:hover ~ a {
+	left: 100%;
+}
+.accordian a:hover {
+	left: 0;
+}
+The issue with the above is that the end-user has to hover off the accordian area, let it reset and then hover on the next project. */
+
+/* Our second option is to be specific so that all projects are at least somewhat visible allowing the end-user to hover from one project to the next without having to let the accordian reset. We can achieve this to a certain extent with CSS only however there's no way to target a hovered elements preceding siblings, we can only target it's proceeding siblings. You'll see that there's a small bit of Javascript in the index.html that will add a class to the parent element based on the item that is being hovered. Here's the CSS part: */
+
+/* When 1st project is hovered, move it 0% from the left */
+.accordian .flash_find:hover { left: 0; }
+
+/* When 1st project is hovered, move it's siblings */
+.accordian .flash_find:hover ~ .aod { left: 85%; }
+.accordian .flash_find:hover ~ .lime_gorilla { left: 90%; }
+.accordian .flash_find:hover ~ .tenxfive { left: 95%; }
+
+
+/* When 2nd project is hovered, move it 5% from the left, leaving the first project somewhat visible. */
+.accordian .aod:hover { left: 5%; }
+
+/* When 2nd project is hovered, move it's siblings */
+.accordian .aod:hover ~ .lime_gorilla { left: 90%; }
+.accordian .aod:hover ~ .tenxfive { left: 95%; }
+
+
+/* When 3rd project is hovered, move it 10% from the left so that it's previous siblings are somewhat visible */
+.accordian .lime_gorilla:hover { left: 10%; }
+
+/* When 3rd project is hovered, using the parent class applied via the javascript, move it's siblings */
+.accordian.lime_gorilla_hovered .aod { left: 5%; }
+.accordian.lime_gorilla_hovered .tenxfive { left: 95%; }
+
+/* When 4th project is hovered, move it 15% from the left so that it's previous siblings are somewhat visible */
+.accordian .tenxfive:hover { left: 15%; }
+
+/* When 4th project is hovered, using the parent class applied via the javascript, move it's siblings */
+.accordian.tenxfive_hovered .aod { left: 5%; }
+.accordian.tenxfive_hovered .lime_gorilla { left: 10%; }
+
+/* When a project is hovered, transition the image to full color */
+.accordian a:hover img {
+	opacity: 1;
+	filter: contrast(130%) brightness(125%) sepia(30%) grayscale(0);
+}
+
+.overlay {
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    height: 116px;
+    background-color: #f2ecd2;
+}
+
+.overlay > label {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    top: 35%;
+    left: 50%;
+    width: 30px;
+    height: 16px;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+
+.overlay > label::before {
+    content: '';
+    display: block;
+    position: relative;
+    top: 7px;
+    border-top: 2px solid #000;
+}
+
+nav {
+	z-index: 100;
+    color: #333;
+    position: relative;
+    top: -55px;
+    height: 171px;
+    padding: 41px 0 34px;
+    padding-left: 2%;
+    text-align: center;
+    font-size: 22px;
+    box-sizing: border-box;
+    background-color: #ddd;
+    transition: top 600ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+}
+
+nav a {
+    display: block;
+    color: #111;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: red;
+}
+#toggle {
+    position: absolute;
+    visibility: hidden;
+}
+
+#toggle:checked ~ nav {
+    top: 80px;
+}
+
+@media only screen and (max-width: 1240px) {
+
+#work h2{
+	font-size: 16em;
+}
+}
+@media only screen and (max-width: 1058px){
+	#space_resume{
+	display: none;
+}
+#resume{
+	float: none;
+	width: 80%;
+	margin: auto;
+}
+
+}
+@media only screen and (max-width: 1028px){
+	#aboutme{
+		padding: 100px 0 47%;
+		width: 80%;
+		margin: auto;
+	}
+	#two_column .container {
+	background: #E5F1FF url(../images/vader_selfie.png) no-repeat bottom;
+	background-size: 40% auto;
+}
+#two_column h2{
+	font-size: 10em;
+}
+}
+@media only screen and (max-width: 768px) {
+
+#work h2{
+	font-size: 13em;
+	margin-bottom: -51px;
+}
+#two_column h2{
+	font-size: 8em;
+}
+#two_column .container{
+	background-size: 44% auto;
+}
+#aboutme{
+	padding: 100px 0 52%;
+	width: 80%;
+}
+#two_column_resume h2{
+	margin-bottom: -84px;
+	font-size: 10em;
+}
+}
+@media only screen and (max-width: 700px){
+#two_column h2{
+	font-size: 5em;
+}
+#aboutme{
+		padding: 100px 0 57%;
+}
+#work h2{
+	font-size: 5em;
+	margin-bottom: -20px;
+}
+#two_column_resume h2{
+	font-size: 5em;
+}
+}
+@media only screen and (max-width: 568px){
+	#hero h1{
+		font-size: 1.52em;
+	}
+}
+@media only screen and (max-width: 414px) {
+
+	#hero h1{
+		font-size: 1.25em;
+	}
+	#work h2{
+		font-size: 7em;
+		margin-bottom: -27px;
+	}
+	#two_column h2{
+		font-size: 4em;
+		text-align: center;
+	}
+	#aboutme{
+		padding: 103px 33px 397px;
+		width: 100%;
+	}
+	#two_column .container {
+	background-size: 75% auto;
+}
+#two_column_resume h2{
+	font-size: 5em;
+	text-align: center;
+	}
+	*{
+		margin: initial;
+	}
+}
